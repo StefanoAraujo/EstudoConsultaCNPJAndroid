@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="438dp"
+                android:id="@+id/webView" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Captcha"
+                android:id="@+id/editTextC" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:hint="CNPJ"
+                android:id="@+id/editText" />
+
+            <ImageView
+                android:layout_width="229dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_gravity="right"
+                android:background="@android:drawable/ic_menu_compass"
+                android:layout_weight="1.01" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pesquisar"
+                android:id="@+id/button"
+                android:layout_gravity="center_horizontal"
+                android:onClick="inserirCaptcha"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get Nome"
+                android:id="@+id/button2"
+                android:onClick="capturaNome"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
